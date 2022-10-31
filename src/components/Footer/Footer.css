@@ -1,0 +1,27 @@
+/* :root {
+    --white: #FDFFEF;
+    --yellow: #F9C203;
+    --green: #45A700;
+    --red: #D00825;
+    --pink: #D16666;
+    --maroon: #AD3B53;
+    --lime-green: #A9B31F;
+    --dark-green: #037805;
+    --black: #091706;
+} */
+
+.FooterContainer {
+    background-color: var(--pink);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+}
+
+.FooterTextContainer{
+    text-align: center;
+}
