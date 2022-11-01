@@ -18,3 +18,8 @@
     padding: 20px 30px;
     width: 100%; 
 }
+
+.title {
+    font-family: 'Righteous', serif;
+    font-size: 45px;
+}

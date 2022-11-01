@@ -1,0 +1,36 @@
+:root {
+  --white: #FDFFEF;
+  --yellow: #F9C203;
+  --green: #45A700;
+  --red: #D00825;
+  --pink: #D16666;
+  --maroon: #AD3B53;
+  --orange: #E66B13;
+  --lime-green: #A9B31F;
+  --dark-green: #037805;
+  --black: #091706;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../../public/fonts/NotoSans/NotoSans-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'Righteous';
+  src: url('../../public/fonts/Righteous/Righteous-Regular.woff2');
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
