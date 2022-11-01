@@ -1,0 +1,14 @@
+.pageBody{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 70px 30px;
+}
+
+.productsContainer{
+    display: grid;
+    column-gap: 60px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 50px;
+}
