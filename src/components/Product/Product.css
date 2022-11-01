@@ -1,0 +1,25 @@
+.productContainer{
+    background-image: linear-gradient(to bottom, var(--orange),var(--maroon));
+    background-color: var(--maroon);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    width: fit-content;
+}
+
+.productText{
+    display: flex;
+    color: var(--white);
+    font-family: 'Righteous', serif;
+    font-size: 1.25rem;
+    justify-content: space-between;
+}
+
+.productImage{
+    background-color: var(--white);
+    border-radius: 250px;
+    margin-bottom: 16px;
+    width:230px;
+    height: 230px;
+}

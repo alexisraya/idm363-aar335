@@ -5,8 +5,8 @@ const Footer = () => {
     return(
         <div className="FooterContainer">
             <div className="FooterTextContainer">
-                <p>Alexis Raya {year}</p>
-                <p>All Hot Sauce Used for Educational Purposes</p>
+                <p className="FooterText">Alexis Raya {year}</p>
+                <p className="FooterText">All Hot Sauce Used for Educational Purposes</p>
             </div>
         </div>
     );

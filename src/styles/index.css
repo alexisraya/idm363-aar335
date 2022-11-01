@@ -1,5 +1,5 @@
 :root {
-  --white: #FDFFEF;
+  --white: #FEFFF9;
   --yellow: #F9C203;
   --green: #45A700;
   --red: #D00825;
@@ -9,16 +9,18 @@
   --lime-green: #A9B31F;
   --dark-green: #037805;
   --black: #091706;
+
+  --bg-color: var(var(--white));
 }
 
 @font-face {
   font-family: 'Noto Sans';
-  src: url('../../public/fonts/NotoSans/NotoSans-Regular.woff2');
+  src: url('../../public/assets/fonts/NotoSans/NotoSans-Regular.woff2');
 }
 
 @font-face {
   font-family: 'Righteous';
-  src: url('../../public/fonts/Righteous/Righteous-Regular.woff2');
+  src: url('../../public/assets/fonts/Righteous/Righteous-Regular.woff2');
 }
 
 body {
@@ -28,6 +30,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
 }
 
 code {
