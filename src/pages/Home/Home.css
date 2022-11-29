@@ -7,8 +7,9 @@
 }
 
 .productsContainer{
-    display: grid;
+    display: flex;
     column-gap: 60px;
-    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    justify-content: center;
     row-gap: 50px;
 }

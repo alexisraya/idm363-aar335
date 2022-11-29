@@ -15,11 +15,31 @@
     color: var(--white);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 20px 30px;
-    width: 100%; 
+    max-width: 100%; 
 }
 
 .title {
     font-family: 'Righteous', serif;
     font-size: 2.8125rem;
+}
+
+.navigation {
+    column-gap: 10px;
+    color: var(--white);
+    display: flex;
+    padding: 0 15px;
+}
+
+.link{
+    color: var(--white);
+    font-family: 'Righteous', serif;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.link:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
