@@ -9,10 +9,15 @@ const Home = () =>{
         useEffect(() => {
             const getProducts = () => {
                 const productsList = []
-                getDocs(collection(db, "products")).then((querySnapshot) => {
+                getDocs(collection(db, "HotSauce")).then((querySnapshot) => {
                     querySnapshot.forEach((doc) => {
-                        productsList.push({...doc.data(),id:doc.id})
-                        // console.log(doc.id, " => ", doc.data());
+                        //productsList.push({...doc.data(),id:doc.id})
+                        //console.log(doc.id, " => ", doc.data());
+                        const productData = {
+                            keyName: doc.id,
+                            ...doc.data(),
+                        }
+                        productsList.push(productData);
                     })
                     setProducts(productsList)
                 }).catch((error) => {
@@ -22,10 +27,16 @@ const Home = () =>{
             getProducts()
         }, []
     )
+    //testing asynch function
+    useEffect(() => {
+        console.log(products);
+    }, [products])
+
     return (
         <div className="pageBody">
-            <div className = "productsContainer">
+            <div className="productsContainer">
                 {products.map((product) => {
+                    console.log(product)
                     return <Product key={product.id} item={product} />
                 })}
             </div>
