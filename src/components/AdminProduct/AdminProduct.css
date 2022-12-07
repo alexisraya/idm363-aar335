@@ -1,0 +1,26 @@
+.adminproductContainer{
+    background-color: grey;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    width: fit-content;
+}
+
+.adminproductText{
+    display: flex;
+    color: var(--white);
+    flex-direction: column;
+    font-family: 'Righteous', serif;
+    font-size: 1.25rem;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+/* .productImage{
+    background-color: var(--white);
+    border-radius: 250px;
+    margin-bottom: 16px;
+    width:230px;
+    height: 230px;
+} */
