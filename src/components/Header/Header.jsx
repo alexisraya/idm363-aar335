@@ -11,11 +11,11 @@ const Header = () => {
         <LinkContainer to='/'>
           <NavLink className={"link"}>Home</NavLink>
         </LinkContainer>
-        <LinkContainer to='/cart'>
-          <NavLink className={"link"}>Cart</NavLink>
-        </LinkContainer>
         <LinkContainer to='/admin'>
           <NavLink className={"link"}>Admin</NavLink>
+        </LinkContainer>
+        <LinkContainer to='/cart'>
+          <NavLink className={"link"}>Cart</NavLink>
         </LinkContainer>
       </nav>
     </div>
