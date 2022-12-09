@@ -42,3 +42,7 @@
 .cart-button:hover{
     cursor: pointer;
 }
+
+.cart-button:active{
+    background-color: var(--maroon);
+}
