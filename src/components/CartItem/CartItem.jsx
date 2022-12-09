@@ -10,7 +10,7 @@ const CartItem = ({item}) => {
                         <h3 className="productTitle">{item.name}</h3>
                         <h3 className="productPrice">{format_price(item.price)}</h3>
                     </div>
-                    <span className="fs-3 cartAmmount">Ammount: {item.quantity}</span>
+                    <span className="fs-3 cartAmount">Amount: {item.quantity}</span>
                 </div>
     )
 }
