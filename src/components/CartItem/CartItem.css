@@ -1,0 +1,14 @@
+.cartContainer{
+    margin: 10px 0;
+}
+
+.cartTop{
+    min-width: 300px;
+    display: flex;
+    column-gap: 15px;
+}
+
+.cartAmmount{
+    color: white;
+    margin: 10px 0px 0px 0px;
+}

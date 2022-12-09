@@ -14,7 +14,7 @@ const AdminProduct = ({item}) => {
                         <h3 className="productTitle">{item.name}</h3>
                         <h3 className="productPrice">{format_price(item.price)}</h3>
                     </div>
-                    <Link className="center" to={`/edit/${item.id}`}>Edit</Link>
+                    <Link className="center edit-link" to={`/edit/${item.id}`}>Edit</Link>
                 </div>
             //</LinkContainer>
     )

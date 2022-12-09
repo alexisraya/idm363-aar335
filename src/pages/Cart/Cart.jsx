@@ -24,7 +24,7 @@ const Cart = () =>{
                 </div>
                 <h2>Total</h2>
             </div> */}
-            <h1 className="text-center">Cart Items</h1>
+            {/* <h1 className="text-center pageTitle">Cart Items</h1> */}
             <div>
                 {cartItems.length === 0 && <h4>Cart is empty</h4>}
             </div>

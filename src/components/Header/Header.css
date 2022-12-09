@@ -15,7 +15,9 @@
     color: var(--white);
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
+    row-gap: 20px;
     padding: 20px 30px;
     max-width: 100%; 
 }
@@ -29,7 +31,7 @@
     column-gap: 10px;
     color: var(--white);
     display: flex;
-    padding: 0 15px;
+    padding: 0 15px 0 0;
 }
 
 .link{

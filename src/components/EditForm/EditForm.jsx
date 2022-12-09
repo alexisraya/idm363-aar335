@@ -1,3 +1,4 @@
+import './EditForm.css';
 import React from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { db } from '../../firestore';
@@ -54,8 +55,8 @@ export const EditForm = () => {
   return (
     <>
     <div className="pageBody">
-        <Form>
-            <h1 className='text-center'>Edit Form</h1>
+        <Form className ='edit-form'>
+            <h1 className='text-center pageTitle'>Edit Form</h1>
             <div className="d-flex justify-content-center">
             <div className="d-flex flex-column" style={{ gap: "1rem"}}>
 
@@ -66,15 +67,15 @@ export const EditForm = () => {
             </div> */}
 
             <Form.Group controlId="formFile" className="mb-3">
-                <Form.Label>Hot Sauce Name</Form.Label>
+                <Form.Label>Hot Sauce Name:</Form.Label>
                 <Form.Control type="text" placeholder="Title" value={sauceNewName || sauce.name} onChange={(e) => setSauceNewName(e.target.value)} />
             </Form.Group>
             <Form.Group controlId="formFile" className="mb-3">
-                <Form.Label>Hot Sauce Price</Form.Label>
+                <Form.Label>Hot Sauce Price:</Form.Label>
                 <Form.Control type="number" placeholder="Price" value={sauceNewPrice || sauce.price} onChange={(e) => setSauceNewPrice(e.target.value)} />
             </Form.Group>
             <Form.Group controlId="formFile" className="mb-3">
-                <Form.Label>Sauce Image</Form.Label>
+                <Form.Label>Sauce Image:</Form.Label>
                 <Form.Control type="text" placeholder="Image Url" value={sauceNewImage || sauce.image_path} onChange={(e) => setSauceNewImage(e.target.value)} />
             </Form.Group>
             <Button className="center" variant="primary" onClick={updateSauce}>Update</Button>

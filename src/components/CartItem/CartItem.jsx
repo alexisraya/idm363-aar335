@@ -5,12 +5,12 @@ import { format_price } from '../tools/Currency';
 
 const CartItem = ({item}) => {
     return(
-                <div className="productContainer">
-                    <div className="productText">
+                <div className="productContainer cartContainer">
+                    <div className="productText cartTop">
                         <h3 className="productTitle">{item.name}</h3>
                         <h3 className="productPrice">{format_price(item.price)}</h3>
                     </div>
-                    <span className="fs-3">Ammount: {item.quantity}</span>
+                    <span className="fs-3 cartAmmount">Ammount: {item.quantity}</span>
                 </div>
     )
 }

@@ -33,7 +33,7 @@ const Product = ({item}) => {
                         <h3 className="productTitle">{item.name}</h3>
                         <h3 className="productPrice">{format_price(item.price)}</h3>
                     </div>
-                    <Button className="center" onClick={() => handleAddToCart(item)} variant="primary">Add to Cart</Button>
+                    <Button className="center cart-button" onClick={() => handleAddToCart(item)} variant="primary">Add to Cart</Button>
                 </div>
             //</LinkContainer>
     )
