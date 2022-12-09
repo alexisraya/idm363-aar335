@@ -38,3 +38,7 @@
     text-align: center;
     width: 100px;
 }
+
+.cart-button:hover{
+    cursor: pointer;
+}
