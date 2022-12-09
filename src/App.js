@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/hotsauce/:id" element={<HotSauce />} />
+          <Route path="/hotsauce/:documentId" element={<HotSauce />} />
       </Routes>
       {/* <Home /> */}
       <Footer />
