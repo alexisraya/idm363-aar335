@@ -7,6 +7,7 @@ import Home from "./pages/Home/Home.jsx";
 import Admin from "./pages/Admin/Admin.jsx";
 import Cart from "./pages/Cart/Cart.jsx";
 import HotSauce from "./pages/HotSauce/HotSauce.jsx";
+import {EditForm} from "./components/EditForm/EditForm.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/edit/:documentId" element={<EditForm />}/>
           <Route path="/hotsauce/:documentId" element={<HotSauce />} />
       </Routes>
       {/* <Home /> */}

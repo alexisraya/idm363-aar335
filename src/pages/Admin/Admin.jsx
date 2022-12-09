@@ -29,14 +29,12 @@ const Admin = () =>{
     )
     //testing asynch function
     useEffect(() => {
-        console.log(products);
     }, [products])
 
     return (
         <div className="pageBody">
             <div className="productsContainer">
                 {products.map((product) => {
-                    console.log(product)
                     return <AdminProduct key={product.id} item={product} />
                 })}
             </div>

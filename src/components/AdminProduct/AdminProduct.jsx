@@ -1,44 +1,23 @@
 import './AdminProduct.css';
+import { Link } from 'react-router-dom';
+import { format_price } from '../tools/Currency';
 //import StateContext from "../../store";
 
 const AdminProduct = ({item}) => {
-    // const state = useContext(StateContext);
-    // const {
-    //     name,
-    //     price,
-    //     keyName,
-    // } = item;
-
-    // const [show, setShow] = useState(false);
-    // const [title, setTitle] = useState(name);
-    // const [itemPrice, setPrice] = useState(price);
-    // const handleClose = () => setShow(false);
-    // const saveInfo = () => {
-    //     let updatedItem = { ...item };
-    //     updatedItem.name = title;
-    //     updatedItem.price = itemPrice;
-    //     state.sendChanges(updatedItem);
-    //     handleClose();
-    // };
-    //return(
-        // <div className="adminproductContainer">
-        //     {/* <div className="productImage">
-                
-        //     </div> */}
-        //     <div className="adminproductText">
-        //         <h3 className="adminproductTitle">Name: {item.name}</h3>
-        //         <h3 className="adminproductPrice">Price: {item.price}</h3>
-        //     </div>
-        //     <Button
-        //     type="button"
-        //     variant="danger"
-        //     className="btn text-white background-red"
-        //     onClick={handleShow}
-        //   >
-        //     Edit
-        //   </Button>
-        // </div>
-    //);
+    return(
+            // <LinkContainer to={`/hotsauce/${item.id}`}>
+                <div className="productContainer">
+                            <div className="productImage">
+                                <img className="productImage" src={item.image_path} alt="hot sauce"/>
+                            </div>
+                    <div className="productText">
+                        <h3 className="productTitle">{item.name}</h3>
+                        <h3 className="productPrice">{format_price(item.price)}</h3>
+                    </div>
+                    <Link className="center" to={`/edit/${item.id}`}>Edit</Link>
+                </div>
+            //</LinkContainer>
+    )
 }
 
 export default AdminProduct;
