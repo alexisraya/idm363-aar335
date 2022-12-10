@@ -4,7 +4,6 @@ import { format_price } from '../tools/Currency';
 import { Button } from 'react-bootstrap';
 
 const Product = ({item}) => {
-    let cartNumber = 0
     const handleAddToCart = (product) => {
         addItemToCart(product)
       
@@ -22,7 +21,6 @@ const Product = ({item}) => {
         cart["totalValue"] = cart.cartItems.reduce((acc, product) => acc + product.price * product.quantity, 0)
         localStorage.setItem('cart', JSON.stringify(cart))
         console.log("updatedCart", cart, format_price(cart.totalValue))
-        cartNumber = itemInCart.quantity
       }
     return(
                 <div className="productContainer">
