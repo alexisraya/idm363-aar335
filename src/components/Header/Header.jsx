@@ -1,4 +1,4 @@
-import { NavLink, Link} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import LinkContainer from "react-router-bootstrap/LinkContainer";
 
 import './Header.css';
@@ -6,10 +6,11 @@ import './Header.css';
 const Header = () => {
   return (
     <div className= "container">
-      <LinkContainer to='/'>
-          <Link className={"title"}>Round Spice</Link>
-        </LinkContainer>
+      <h1 className="title">Round Spice</h1>
       <nav className="navigation">
+        <LinkContainer to='/'>
+          <NavLink className={"link"}>Home</NavLink>
+        </LinkContainer>
         <LinkContainer to='/admin'>
           <NavLink className={"link"}>Admin</NavLink>
         </LinkContainer>

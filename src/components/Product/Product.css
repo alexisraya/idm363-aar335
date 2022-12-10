@@ -8,10 +8,6 @@
     width: fit-content;
 }
 
-.productLink:hover{
-    cursor: pointer;
-}
-
 .productText{
     display: flex;
     color: var(--white);
