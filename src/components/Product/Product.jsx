@@ -26,18 +26,18 @@ const Product = ({item}) => {
         cartNumber = itemInCart.quantity
       }
     return(
-            // <LinkContainer to={`/hotsauce/${item.id}`}>
                 <div className="productContainer">
-                            <div className="productImage">
-                                <img className="productImage" src={item.image_path} alt="hot sauce"/>
-                            </div>
+                    <LinkContainer to={`/hotsauce/${item.id}`}>
+                      <div className="productImage">
+                          <img className="productImage" src={item.image_path} alt="hot sauce"/>
+                      </div>
+                    </LinkContainer>
                     <div className="productText">
                         <h3 className="productTitle">{item.name}</h3>
                         <h3 className="productPrice">{format_price(item.price)}</h3>
                     </div>
                     <Button className="center cart-button" onClick={() => handleAddToCart(item)} variant="primary">Add to Cart</Button>
                 </div>
-            //</LinkContainer>
     )
 }
 
