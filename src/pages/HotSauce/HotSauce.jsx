@@ -1,4 +1,5 @@
 import React from 'react'
+import './HotSauce.css';
 import { useParams } from 'react-router-dom'
 import { db } from '../../firestore';
 import { doc, getDoc, collection, updateDoc } from "firebase/firestore";
@@ -35,28 +36,26 @@ const HotSauce = (products) => {
         getHotSauce();
     }, [documentId]);
     return (
-        <>
-        <h1 className="text-center">About this Product</h1>
-        <div className="allsauce">
-            {loading && <p>Loading...</p>}
-            {error && <p>{error}</p>}
-            {hotsauce && (
-                <Card style={{ width: '38rem' }}>
-                    <Card.Img variant="top" src={hotsauce.image_path} />
-                    <Card.Body>
-                        <Card.Title>{hotsauce.name}</Card.Title>
-                        <Card.Text>
-                            {format_price(hotsauce.price)}
-                        </Card.Text>
-                        <Link to={`/`}>
-                            <Button variant="primary">Go Back</Button>
-                        </Link>
-                    </Card.Body>
-                </Card>
-            )}
+        <div className="pageBody">
+            <div className="allsauce">
+                {loading && <p>Loading...</p>}
+                {error && <p>{error}</p>}
+                {hotsauce && (
+                    <Card>
+                        <Card.Img variant="top" className="sauceImage" src={hotsauce.image_path} />
+                        <Card.Body>
+                            <Card.Title className="sauceName">{hotsauce.name}</Card.Title>
+                            <Card.Text className="saucePrice">
+                                {format_price(hotsauce.price)}
+                            </Card.Text>
+                            {/* <Link to={`/`}>
+                                <Button className="backButton" variant="primary">Go Back</Button>
+                            </Link> */}
+                        </Card.Body>
+                    </Card>
+                )}
+            </div>
         </div>
-        
-        </>
     )
 }
 

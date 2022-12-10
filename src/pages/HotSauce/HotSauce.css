@@ -1,0 +1,23 @@
+.sauceImage{
+    border-radius: 250px;
+    height: 400px;
+    width:400px;
+}
+
+.sauceName{
+    color: var(--maroon);
+    font-family: 'Righteous', serif;
+    font-size: 2rem;
+    padding: 15px 0px 10px 0px;
+}
+
+.saucePrice{
+    color: var(--orange);
+    font-family: 'Righteous', serif;
+    font-size: 1.5rem;
+    padding: 0px 0px 10px 0px;
+}
+
+.backButton{
+    font-size: 1rem;
+}
