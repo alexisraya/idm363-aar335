@@ -24,6 +24,10 @@
     height: 230px;
 }
 
+.productImage:hover{
+    cursor: pointer;
+}
+
 .cart-button{
     background-color: var(--orange);
     border: 1px;
