@@ -35,6 +35,26 @@ const HotSauce = (products) => {
         };
         getHotSauce();
     }, [documentId]);
+
+    const handleAddToCart = (product) => {
+        addItemToCart(product)
+      
+      }
+      const addItemToCart = (product) => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || {}
+        cart.cartItems = cart.cartItems || []
+        const itemInCart = cart.cartItems.find((cartItem) => cartItem.id === product.id)
+        if (itemInCart) {
+          itemInCart.quantity += 1
+        } else {
+          
+          cart.cartItems.push({ id:product.id, name:product.name, price : product.price, image:product.image_path, quantity: 1 })
+        }
+        cart["totalValue"] = cart.cartItems.reduce((acc, product) => acc + product.price * product.quantity, 0)
+
+        localStorage.setItem('cart', JSON.stringify(cart))
+        console.log("updatedCart", cart, format_price(cart.totalValue))
+      }
     return (
         <div className="pageBody">
             <div className="allsauce">
@@ -51,6 +71,7 @@ const HotSauce = (products) => {
                             {/* <Link to={`/`}>
                                 <Button className="backButton" variant="primary">Go Back</Button>
                             </Link> */}
+                            <Button className="center cart-button" onClick={() => handleAddToCart(hotsauce)} variant="primary">Add to Cart</Button>
                         </Card.Body>
                     </Card>
                 )}
