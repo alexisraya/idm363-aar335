@@ -1,9 +1,14 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { db } from '../../firestore';
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, collection, updateDoc } from "firebase/firestore";
+import { async } from '@firebase/util';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+import  {Card}  from 'react-bootstrap';
+import { format_price } from '../../components/tools/Currency.jsx';
 
 
 const HotSauce = (products) => {
@@ -30,22 +35,28 @@ const HotSauce = (products) => {
         getHotSauce();
     }, [documentId]);
     return (
-        <div className='pageBody'>
-        <h1 className="text-center pageTitle">{hotsauce.name}</h1>
+        <>
+        <h1 className="text-center">About this Product</h1>
         <div className="allsauce">
             {loading && <p>Loading...</p>}
             {error && <p>{error}</p>}
-            {console.log(hotsauce.name)}
             {hotsauce && (
-                <div className="productContainer--individual">
-                    <div className="productImageContainer">
-                        <img className="productImage" src={hotsauce.image_path} alt={hotsauce.name}/>
-                    </div>
-                </div>
+                <Card style={{ width: '38rem' }}>
+                    <Card.Img variant="top" src={hotsauce.image_path} />
+                    <Card.Body>
+                        <Card.Title>{hotsauce.name}</Card.Title>
+                        <Card.Text>
+                            {format_price(hotsauce.price)}
+                        </Card.Text>
+                        <Link to={`/`}>
+                            <Button variant="primary">Go Back</Button>
+                        </Link>
+                    </Card.Body>
+                </Card>
             )}
         </div>
         
-        </div>
+        </>
     )
 }
 
